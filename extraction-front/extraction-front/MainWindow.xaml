@@ -4,11 +4,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="21,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="Select tool"/></TextBlock>
-        <Frame x:Name="Main" Content="Frame" HorizontalAlignment="Left" Height="240" Margin="0,79,0,0" VerticalAlignment="Top" Width="386" NavigationUIVisibility="Hidden" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Source="Page1.xaml" />
-        <StackPanel HorizontalAlignment="Left" Height="48" Margin="407,10,0,0" VerticalAlignment="Top" Width="100">
-            <Button Content="page 1" MinWidth="100" Click="Button_Click_1" />
-            <Button Content="page 2" MinWidth="100" Click="Button_Click_2" />
-        </StackPanel>
+        <Frame x:Name="Main" Content="Frame" HorizontalAlignment="Left" Height="266" Margin="10,43,0,0" VerticalAlignment="Top" Width="497" NavigationUIVisibility="Hidden" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Source="Page1.xaml" />
         <ComboBox x:Name="toolselection" HorizontalAlignment="Left" Margin="97,16,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" SelectedValuePath="Content">
             <ComboBoxItem IsSelected="True">exfp3</ComboBoxItem>
             <ComboBoxItem>exkifint</ComboBoxItem>
