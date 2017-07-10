@@ -8,7 +8,18 @@
 	Title="Page2">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="75,109,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="48"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" Height="36"><Run Language="ja-jp" Text="Versatile Single Switch"/><LineBreak/><Run Language="ja-jp"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="21,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="Path to executable for data extraction"><Run Language="ja-jp" Text=".exe file"/></TextBlock>
+        <TextBox x:Name="versatileSingleExePathText" HorizontalAlignment="Left" Height="23" Margin="102,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287" RenderTransformOrigin="-0.008,0.435"/>
+        <Button x:Name="exeFileButton" Content="Choose" HorizontalAlignment="Left" Margin="403,84,0,0" VerticalAlignment="Top" Width="75" Click="exeFileButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.082,-0.5" ToolTip="Source files format to extract"><Run Language="ja-jp" Text="Format"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="21,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" ToolTip="Path to source files folder"><Run Language="ja-jp" Text="Directory"/></TextBlock>
+        <TextBox x:Name="versatileSingleFormatText" HorizontalAlignment="Left" Height="23" Margin="219,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55"/>
+        <TextBox x:Name="versatileSingleSourceDirectoryPathText" HorizontalAlignment="Left" Height="23" Margin="102,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="287"/>
+        <Button x:Name="sourceFileDirectoryButt" Content="Choose" HorizontalAlignment="Left" Margin="403,159,0,0" VerticalAlignment="Top" Width="75" Click="sourceFileDirectoryButt_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="102,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="*whatever files exist*."/></TextBlock>
+        <Button x:Name="versatileSingleExtractButton" Content="Extract" HorizontalAlignment="Left" Margin="403,219,0,0" VerticalAlignment="Top" Width="75" Click="versatileSingleExtractButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="102,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="9"><Run Language="ja-jp" Text="for example: hgx2bmp.exe"/></TextBlock>
 
     </Grid>
 </Page>
