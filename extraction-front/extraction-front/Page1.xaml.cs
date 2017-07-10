@@ -96,7 +96,26 @@ namespace extraction_front
 
             startInfo.Arguments = args;
             process.StartInfo = startInfo;
+            // change status text
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow).statusText.Text = "Extracting...";
+                }
+            }
+            
             process.Start();
+            process.WaitForExit();
+            MessageBox.Show("Extraction finished!");
+            // change status text
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow).statusText.Text = "Idle";
+                }
+            }
         }
     }
 }

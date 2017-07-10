@@ -9,6 +9,8 @@
             <ComboBoxItem IsSelected="True">exfp3</ComboBoxItem>
             <ComboBoxItem>exkifint</ComboBoxItem>
         </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="380,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="Status :"/></TextBlock>
+        <TextBlock x:Name="statusText" x:FieldModifier="public" HorizontalAlignment="Left" Margin="433,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="Idle"/></TextBlock>
 
     </Grid>
 </Window>
