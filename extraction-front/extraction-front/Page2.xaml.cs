@@ -79,12 +79,13 @@ namespace extraction_front
             
             DirectoryInfo dirInfo = new DirectoryInfo(folderPath);
             //FileInfo[] files = dirInfo.GetFiles("*.png");
-            string[] files = Directory.GetFiles(folderPath, "*.png");
+            string[] files = Directory.GetFiles(folderPath, "*." + format);
 
             int filesCount = files.Length;
             string args;
             System.IO.Directory.CreateDirectory("extraction");
             string workingdirectory = System.IO.Directory.GetCurrentDirectory() + "\\extraction";
+            int i = 0;
 
              // change status text
             foreach (Window window in Application.Current.Windows)
@@ -103,7 +104,7 @@ namespace extraction_front
                 args += "\" \"";
                 args += file;
                 args += "\"";
-
+                //Console.WriteLine(args);
                 System.Diagnostics.Process process = new System.Diagnostics.Process();
                 System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
                 startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -113,7 +114,9 @@ namespace extraction_front
                 startInfo.Arguments = args;
                 process.StartInfo = startInfo;
 
-                // >>>Update extraction count
+                i++;
+                extractionCountText.Text = i + "/" + filesCount;
+
                 process.Start();
                 process.WaitForExit();
             }
