@@ -45,11 +45,11 @@ namespace extraction_front
                 case "exfp3":
                     Main.Content = new Page1();
                     break;
-                case "exkifint":
+                case "versatile single switch":
                     Main.Content = new Page2();
                     break;
                 default:
-                    Main.Content = new Page1();
+                    Main.Content = new Page2();
                     break;
             }
         }

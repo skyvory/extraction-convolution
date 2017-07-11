@@ -5,9 +5,9 @@
     <Grid Background="#eff5ff">
         <TextBlock HorizontalAlignment="Left" Margin="25,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="Select tool"/></TextBlock>
         <Frame x:Name="Main" Content="Frame" HorizontalAlignment="Left" Height="266" Margin="10,43,0,0" VerticalAlignment="Top" Width="497" NavigationUIVisibility="Hidden" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Source="Page2.xaml" />
-        <ComboBox x:Name="toolselection" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" SelectedValuePath="Content">
-            <ComboBoxItem IsSelected="True">exkifint</ComboBoxItem>
-            <ComboBoxItem>exfp3</ComboBoxItem>
+        <ComboBox x:Name="toolselection" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" Width="127" SelectionChanged="ComboBox_SelectionChanged" SelectedValuePath="Content">
+            <ComboBoxItem IsSelected="True">versatile single switch</ComboBoxItem>
+            <ComboBoxItem IsEnabled="False" Visibility="Collapsed">exfp3</ComboBoxItem>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="380,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="Status :"/></TextBlock>
         <TextBlock x:Name="statusText" x:FieldModifier="public" HorizontalAlignment="Left" Margin="433,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="Idle"/></TextBlock>
