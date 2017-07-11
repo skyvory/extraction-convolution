@@ -2,7 +2,7 @@
 
 Collection of intermediary batch tool for visual novel resources extraction I have used personally.
 
-## GUI
+## GUI - Extraction Front
 
 Extraction Front currently provides an app executable for easier common use.
 
@@ -15,3 +15,5 @@ Provides simplification of batch extraction with whatever extraction tool that t
 For such tool, by using this GUI-supported intermediary batch extractor, you can choose executables (.exe) for resource processing, assign resource file format to process, and directory of the resource files.
 
 Note that for tools/executables that require more than just one resource file, the result would be guaranteed not according to what expected, or at worse crash the application.
+
+### *Extraction Front hasn't been tested as the developer hasn't had spare time to assure app works seamlessly. Feel free to report problem.*
