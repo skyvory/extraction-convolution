@@ -96,6 +96,8 @@ namespace extraction_front
                 }
             }
 
+            extractionCountText.Text = "0/" + filesCount;
+
             foreach (string file in files)
             {
                 // Console.WriteLine(file);
