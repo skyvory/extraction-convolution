@@ -22,6 +22,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="102,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="9"><Run Language="ja-jp" Text="for example: hgx2bmp.exe"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="21,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="Active Extraction :"/></TextBlock>
         <TextBlock x:Name="extractionCountText" HorizontalAlignment="Left" Margin="128,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="0/0"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="297,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextAlignment="Justify"><Run Language="ja-jp" Text="Simplify extraction process for all designated files in a folder with tool that only process one file at a time."/></TextBlock>
 
     </Grid>
 </Page>
