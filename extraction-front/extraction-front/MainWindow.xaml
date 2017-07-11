@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="21,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="Select tool"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="25,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ja-jp" Text="Select tool"/></TextBlock>
         <Frame x:Name="Main" Content="Frame" HorizontalAlignment="Left" Height="266" Margin="10,43,0,0" VerticalAlignment="Top" Width="497" NavigationUIVisibility="Hidden" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Source="Page2.xaml" />
-        <ComboBox x:Name="toolselection" HorizontalAlignment="Left" Margin="97,16,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" SelectedValuePath="Content">
+        <ComboBox x:Name="toolselection" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" SelectedValuePath="Content">
             <ComboBoxItem IsSelected="True">exkifint</ComboBoxItem>
             <ComboBoxItem>exfp3</ComboBoxItem>
         </ComboBox>
