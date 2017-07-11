@@ -17,3 +17,5 @@ For such tool, by using this GUI-supported intermediary batch extractor, you can
 Note that for tools/executables that require more than just one resource file, the result would be guaranteed not according to what expected, or at worse crash the application.
 
 ### *Extraction Front hasn't been tested as the developer hasn't had spare time to assure app works seamlessly. Feel free to report problem.*
+
+#### Disclaimer: By using Extraction Front, you agree to run a badly written C# WPF application on your precious computer where the developer will not be held responsible for any virtual cancer induced by evil code.
