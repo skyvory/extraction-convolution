@@ -1,0 +1,5 @@
+put def.rld on a folder
+put reference folder on the same folder (can try running fixipgyu to check which folder it requires to access)
+run batch for fixipgyu
+
+run batch for gyu
