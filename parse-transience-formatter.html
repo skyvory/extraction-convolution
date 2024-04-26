@@ -1,0 +1,116 @@
+<html>
+
+<head>
+  <script>
+    var da = '';
+    function date() {
+      var d = document.getElementById('date').value;
+      d.replace(/[^0-9.]/g, "");
+      d = d.trim();
+      if(d.length > 6) {
+        d = d.substring(d.length-6);
+      }
+      da = "[" + d + "]";
+    }
+
+    var br = '';
+    function brand() {
+      var b = document.getElementById('brand').value;
+      b = b.trim();
+      br = "[" + b + "]";
+    }
+
+    var formatted;
+    function merge() {
+      formatted = da + br + " ";
+      var copyarea = document.querySelector('#format');
+      copyarea.value = formatted;
+      // var val = document.getElementById('format').value;
+      // val = formatted;
+      // val.select();
+      // copyarea.select();
+      // document.execCommand('copy');
+    }
+    function copy() {
+      var copyarea = document.querySelector('#format');
+      copyarea.select();
+      document.execCommand('copy');
+
+    }
+
+    // setInterval(merge(), 500);
+
+    // var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+
+    // copyTextareaBtn.addEventListener('click', function (event) {
+    //   var copyTextarea = document.querySelector('.js-copytextarea');
+    //   copyTextarea.select();
+
+    //   var successful = document.execCommand('copy');
+    // });
+
+
+    function parseSource() {
+      var sourceText = document.getElementById('source').value;
+      // console.log(sourceText);
+      if(sourceText === '') {
+        return;
+      }
+      // DLSite source
+      var brandMatch = sourceText.match(/[\n\r][ \t]*サークル名[ \t]*([^\n\r]*)/i);
+      var releaseMatch = sourceText.match(/[\n\r][ \t]*販売日[ \t]*([^\n\r]*)/i);
+      // Getchu source
+      if(brandMatch === null) {
+        brandMatch = sourceText.match(/[\n\r][ \t]*ブランド：[ \t]*([^\n\r]*)/i);
+      }
+      if(releaseMatch === null) {
+        releaseMatch = sourceText.match(/[\n\r][ \t]*発売日[ \t]*([^\n\r]*)/i);
+      }
+      console.log(brandMatch);
+      brandMatch = brandMatch[1].trim();
+      brandMatch = brandMatch.replace("（このブランドの作品一覧）", "");
+      releaseMatch = releaseMatch[1].trim();
+      releaseMatch = releaseMatch.replace(/\D/g,'');
+      document.getElementById('date').value = releaseMatch;
+      document.getElementById('brand').value = brandMatch;
+      date();
+      brand();
+      merge();
+      document.getElementById('status').textContent = "ok";
+    }
+
+  </script>
+</head>
+
+<body>
+  Date
+  <input type="number" id="date" oninput="date();merge();" onClick="this.select();" style="height:30px;width:600px;">
+  <br />
+  <br> Brand
+  <input type="text" id="brand" oninput="brand();merge();" onClick="this.setSelectionRange(0, this.value.length)" style="height:30px;width:600px;">
+  <br>
+  <br>
+
+  <button onclick="copy()" style="width:100%;height:60px;">copy</button>
+  
+  <br>
+  <br>
+
+  <textarea id="format" rows="18" cols="80"></textarea>
+  <textarea id="source" rows="18" cols="40"  oninput="parseSource()"></textarea>
+  <!--<p id="format"></p>-->
+
+  <!--<p>
+    <textarea class="js-copytextarea">Hello I'm some text</textarea>
+  </p>
+
+  <p>
+    <button class="js-textareacopybtn">Copy Textarea</button>
+  </p>-->
+
+  <br />
+  <br />
+  Status: <p id="status">none</p>
+</body>
+
+</html>
